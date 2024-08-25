@@ -1,0 +1,32 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'react-responsive-carousel/lib/styles/carousel.min.css';
+/* Global or Tailwind CSS file */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+@media (max-width: 640px) { /* Mobile view */
+    .carousel .slide {
+      width: 50%; /* Show 2 items per slide */
+    }
+  }
+  
+  @media (min-width: 640px) and (max-width: 1024px) { /* Tablet view */
+    .carousel .slide {
+      width: 20%; /* Show 5 items per slide */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Web view */
+    .carousel .slide {
+      width: 20%; /* Show 5 items per slide */
+    }
+  }
+  
